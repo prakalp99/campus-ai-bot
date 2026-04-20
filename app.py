@@ -17,7 +17,7 @@ st.set_page_config(page_title="Institution AI", page_icon="🏫")
 st.title("🏫 Student Assistant Bot")
 
 # 1. Setup LLM
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
+llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", temperature=0)
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 
 # 2. Setup Vector Database (For Question Papers & Syllabus)

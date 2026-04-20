@@ -19,7 +19,7 @@ st.title("🏫 Student Assistant Bot")
 
 # 1. Setup LLM (Using the fast, stable Flash model)
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
-embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
 
 # 2. Setup Vector Database (Strictly for PDFs like Syllabus)
 @st.cache_resource

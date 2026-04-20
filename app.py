@@ -5,10 +5,10 @@ from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmb
 from langchain_community.document_loaders import PyPDFDirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
-from langchain.tools.retriever import create_retriever_tool
+# from langchain.tools.retriever import create_retriever_tool
 from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.tools import tool
+from langchain_core.tools import tool, create_retriever_tool
 
 # Load API Key
 load_dotenv()

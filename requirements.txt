@@ -1,6 +1,6 @@
-streamlit==1.32.0
-langchain==0.1.13
-langchain-google-genai==1.0.1
+streamlit
+langchain
+langchain-google-genai
 faiss-cpu
-pypdf==4.1.0
-python-dotenv==1.0.1
+pypdf
+python-dotenv

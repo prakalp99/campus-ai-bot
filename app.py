@@ -2,6 +2,7 @@ import os
 import streamlit as st
 import pandas as pd
 from dotenv import load_dotenv
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_community.document_loaders import PyPDFDirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -19,7 +20,8 @@ st.title("🏫 Student Assistant Bot")
 
 # 1. Setup LLM (Using the fast, stable Flash model)
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
-embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+# We are swapping Google's limited API for a fast, free, offline model
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 # 2. Setup Vector Database (Strictly for PDFs like Syllabus)
 @st.cache_resource
